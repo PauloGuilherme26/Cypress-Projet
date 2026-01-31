@@ -18,7 +18,7 @@ describe('Transações', () => {
         
         //cy.get("tbody tr td.income").should("have.text", "R$ 250,00")   //Erro ao localizar o elemento "R$ 250,00"
         //cy.get('.income').should("have.text", "R$&nbsp;250,00")
-
+        
     });
 
     it('Cadastrar uma saída', () => {
