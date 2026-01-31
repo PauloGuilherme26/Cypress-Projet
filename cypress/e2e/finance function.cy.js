@@ -29,5 +29,11 @@ describe('Transações', () => {
         cy.get('#date').type("2025-11-27")
     });
     
-    
+    function criarTransação (descrição, valor) {
+
+        
+    }
+
+
+
 });

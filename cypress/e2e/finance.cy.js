@@ -28,7 +28,7 @@ describe('Transações', () => {
         cy.get('#amount').type(-800)
         cy.get('#date').type("2025-11-27")
         cy.contains("button", "Salvar").click()
-         cy.get("tbody tr td.description").should("have.text", "Aluguel")
+        cy.get("tbody tr td.description").should("have.text", "Aluguel")
     });
     
    
