@@ -21,7 +21,7 @@ describe('Transações', () => {
         
     });
 
-    it('Cadastrar uma saída', () => {
+    it('Cadastrar uma saída', () => {                   //it.skip => pausa a execução do teste
         cy.visit("https://dev-finance.netlify.app/#")
         cy.contains("+ Nova Transação").click()         
         cy.get('#description').type("Aluguel")           
