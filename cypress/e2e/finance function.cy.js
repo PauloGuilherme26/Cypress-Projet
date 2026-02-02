@@ -28,14 +28,24 @@ describe('Transações', () => {
 
     it('Excluir transação', () => {
         
+        criarTransação ("Felipe", 3653)
+        
         criarTransação ("Samuel", 1000)
         //cy.contains("tr td.description", "Samuel").parent().find("img").click()
         cy.contains(".description", "Samuel")
             .parent()       //parent() -> Localiza o elemento pai (Tag tr - linha da tabela correspondente a descrição Samuel).
             .find("img")    //find() -> Localiza o elemento (imagem) da linha da tabela (Tag tr).
             .click()
+        cy.get("tbody tr").should("have.length",1)
 
-       
+        criarTransação ("João", 460)
+        //cy.contains("tr td.description", "João").siblings().children("img").click()
+        cy.contains(".description", "João")
+            .siblings()       //siblings() -> Localiza os elementos irmãos (Tag tr - linha da tabela correspondente a descrição João).
+            .children("img")  //children() -> Localiza o elemento filho (imagem) da linha da tabela (Tag tr).
+            .click()
+        cy.get("tbody tr").should("have.length",1)
+
     });
 });
 
