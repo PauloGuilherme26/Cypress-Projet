@@ -11,7 +11,7 @@ describe('Transações', () => {
         cy.visit("https://dev-finance.netlify.app/#")
     });
 
-    it.skip('Cadastrar uma entrada', () => {
+    it('Cadastrar uma entrada', () => {
                 
         criarTransação ("Paulo", 460)
         //criarTransação ("Arthur", 540)      
@@ -19,7 +19,7 @@ describe('Transações', () => {
         cy.get("tbody tr td.description").should("have.text", "Paulo") 
     });
         
-    it.skip('Cadastrar uma saida', () => {
+    it('Cadastrar uma saida', () => {
                 
         criarTransação ("Joaquim", -500)
        
@@ -29,7 +29,7 @@ describe('Transações', () => {
     it('Excluir transação', () => {
         
         criarTransação ("Felipe", 3653)
-        
+
         criarTransação ("Samuel", 1000)
         //cy.contains("tr td.description", "Samuel").parent().find("img").click()
         cy.contains(".description", "Samuel")
